@@ -2,13 +2,14 @@ import express from 'express'
 import { getAllPersons, insertPerson } from '../database/connection'
 const router = express.Router()
 router.use(express.json())
-//api/v1/persons
+
+//app.use('/',person)
 router.get('/',async(req,res)=>{
 
   try{
     const response = await getAllPersons()
     console.log("asdf",response)
-    res.json(response)
+    res.send(response)
   }catch(e){
     res.status(500).json("failed getting all persons")
   }

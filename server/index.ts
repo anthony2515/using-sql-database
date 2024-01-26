@@ -13,4 +13,4 @@ app.listen(port, () => {
   console.log('server is running on port', port)
 })
 
-app.use('/api/v1/persons',person)
+app.use('/',person)
