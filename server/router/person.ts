@@ -11,7 +11,7 @@ const corsOptions = {
 const router = express.Router()
 router.use(cors(corsOptions))
 router.use(express.json())
-connect()
+
 //app.use('/',person)
 router.get('/.netlify/functions/api',async(req,res)=>{
  
