@@ -16,4 +16,9 @@ export const connectionString:config= {
     encrypt: true,
     trustServerCertificate: false,
   },
+  pool: {
+    max: 10, // maximum number of connections in the pool
+    min: 0,  // minimum number of connections in the pool
+    idleTimeoutMillis: 30000, // how long a connection is allowed to remain idle in the pool before being closed
+  },
 }

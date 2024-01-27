@@ -8,20 +8,28 @@ interface Person{
 
 export async function connect() {
   try {
-    await sql.connect(connectionString)
+    const pool =  await sql.connect(connectionString)
     console.log("Database connected succesfully")
+    return pool
   } catch (e) {
     console.error('Database connection failed', e)
+    throw e
   }
 }
 
 export async function getAllPersons(){
+  let pool
   try{
-    
-    const result = await sql.query("SELECT * FROM Person")
+    pool = await connect()
+    const result = await pool.request().query("SELECT * FROM Person")
     return result.recordset
   }catch(e){
     console.error("Failed getting all person record",e)
+    throw e
+  }finally{
+    if(pool){
+      pool.close()
+    }
   }
 }
 
