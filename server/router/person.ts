@@ -4,7 +4,7 @@ const router = express.Router()
 router.use(express.json())
 
 //app.use('/',person)
-router.get('/.netlify/functions/api',async(req,res)=>{
+router.get('/',async(req,res)=>{
 
   try{
     const response = await getAllPersons()

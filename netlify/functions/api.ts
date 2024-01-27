@@ -13,6 +13,6 @@ app.listen(port, () => {
   console.log('server is running on port', port)
 })
 
-app.use('/api/',person)
+app.use('/api/v1/person',person)
 
 export const handler = serverless(app)
