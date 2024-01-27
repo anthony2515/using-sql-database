@@ -9,7 +9,7 @@ router.get('/.netlify/functions/api',async(req,res)=>{
   try{
     
     const response = await getAllPersons()
-    if(response){res.send(response)}else{res.send("failed getting al persons")}
+    res.send(response)
     
     console.log("asdf",response)
     
