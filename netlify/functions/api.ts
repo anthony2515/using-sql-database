@@ -1,6 +1,6 @@
 import express from 'express'
-import {connect} from './database/connection.ts'
-import person from './router/person.ts'
+import {connect} from '../../server/database/connection.ts'
+import person from '../../server/router/person.ts'
 import serverless from "serverless-http";
 //connect to database
 connect()

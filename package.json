@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx tsx server/api"
+    "start": "npx tsx netlify/functions/api.ts"
   },
   "keywords": [],
   "author": "",
