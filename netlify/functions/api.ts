@@ -3,7 +3,7 @@ import {connect} from '../../server/database/connection.ts'
 import person from '../../server/router/person.ts'
 import serverless from "serverless-http";
 //connect to database
-connect()
+
 
 
 const app = express()

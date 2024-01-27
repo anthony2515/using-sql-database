@@ -2,7 +2,7 @@ import express from 'express'
 import { getAllPersons, insertPerson,connect } from '../database/connection'
 const router = express.Router()
 router.use(express.json())
-
+connect()
 //app.use('/',person)
 router.get('/.netlify/functions/api',async(req,res)=>{
  
