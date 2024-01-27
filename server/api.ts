@@ -1,7 +1,7 @@
 import express from 'express'
 import {connect} from './database/connection.ts'
 import person from './router/person.ts'
-
+import serverless from "serverless-http";
 //connect to database
 connect()
 
@@ -13,4 +13,6 @@ app.listen(port, () => {
   console.log('server is running on port', port)
 })
 
-app.use('/',person)
+app.use('/api/',person)
+
+export const handler = serverless(app)

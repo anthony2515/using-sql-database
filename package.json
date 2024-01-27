@@ -6,12 +6,13 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx tsx server/index"
+    "start": "npx tsx server/api"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@netlify/functions": "^2.5.1",
     "@types/dotenv": "^8.2.0",
     "@types/express": "^4.17.21",
     "@types/mssql": "^9.1.4",
@@ -19,6 +20,7 @@
     "dotenv": "^16.4.1",
     "express": "^4.18.2",
     "mssql": "^10.0.2",
+    "serverless-http": "^3.2.0",
     "ts-node": "^10.9.2",
     "tsx": "^4.7.0"
   },
