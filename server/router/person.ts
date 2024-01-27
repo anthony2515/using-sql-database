@@ -1,5 +1,5 @@
 import express from 'express'
-import { getAllPersons, insertPerson } from '../database/connection'
+import { getAllPersons, insertPerson,connect } from '../database/connection'
 const router = express.Router()
 router.use(express.json())
 
@@ -7,8 +7,9 @@ router.use(express.json())
 router.get('/.netlify/functions/api',async(req,res)=>{
 
   try{
+    connect()
     const response = await getAllPersons()
-    res.send("response")
+    res.send(response)
     console.log("asdf",response)
     
   }catch(e){
