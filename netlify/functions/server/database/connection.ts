@@ -17,7 +17,7 @@ export async function connect() {
 
 export async function getAllPersons(){
   try{
-    await connect()
+    
     const result = await sql.query("SELECT * FROM Person")
     return result.recordset
   }catch(e){

@@ -16,7 +16,7 @@ router.use(express.json())
 router.get('/.netlify/functions/api',async(req,res)=>{
  
   try{
-    
+    await connect()
     const response = await getAllPersons()
     res.json(response)
   }catch(e){
