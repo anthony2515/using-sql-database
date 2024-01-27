@@ -9,7 +9,7 @@ router.get('/.netlify/functions/api',async(req,res)=>{
   try{
     
     const response = await getAllPersons()
-    res.send(`<h1>${response}</h1>`)
+    res.send(`<h1>${response.map(data=>data.firstName)}</h1>`)
   }catch(e){
     res.status(500).json("failed getting all persons")
   }
