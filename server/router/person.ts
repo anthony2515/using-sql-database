@@ -1,6 +1,15 @@
 import express from 'express'
 import { getAllPersons, insertPerson,connect } from '../database/connection'
+import cors from 'cors'
+//connect to database
+const corsOptions = {
+  origin:'https://main--chimerical-bombolone-a885d6.netlify.app/api/.netlify/functions/api',
+  methods:'GET',
+  credentials:true,
+  optionsSuccessStatus:204
+}
 const router = express.Router()
+router.use(cors(corsOptions))
 router.use(express.json())
 connect()
 //app.use('/',person)
