@@ -4,7 +4,7 @@ const router = express.Router()
 router.use(express.json())
 
 //app.use('/',person)
-router.get('/api',async(req,res)=>{
+router.get('/api/',async(req,res)=>{
 
   try{
     const response = await getAllPersons()
