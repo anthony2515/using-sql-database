@@ -14,5 +14,6 @@ export const connectionString:config= {
   password,
   options: {
     encrypt: true,
+    trustServerCertificate: false,
   },
 }
