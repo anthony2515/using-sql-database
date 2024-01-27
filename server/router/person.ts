@@ -5,11 +5,12 @@ router.use(express.json())
 
 //app.use('/',person)
 router.get('/.netlify/functions/api',async(req,res)=>{
-
+ 
   try{
-    connect()
+    
     const response = await getAllPersons()
-    res.send(response)
+    if(response!=null){res.send(response)}else{res.send("failed getting al persons")}
+    
     console.log("asdf",response)
     
   }catch(e){
